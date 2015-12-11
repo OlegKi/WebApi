@@ -16,14 +16,14 @@ namespace ODataSample.Web.Controllers
             _sampleContext = sampleContext;
         }
 
-        // GET: api/Products
+        // GET: odata/Products
         [HttpGet]
         public IEnumerable<Product> Get()
         {
             return _sampleContext.Products;
         }
 
-        // GET api/Products/5
+        // GET odata/Products/5
         [HttpGet("{productId}")]
         public IActionResult Get(int productId)
         {
@@ -72,7 +72,7 @@ namespace ODataSample.Web.Controllers
             return new ObjectResult(product.ProductId);
         }
 
-        // POST api/Products
+        // POST odata/Products
         [HttpPost]
         public IActionResult Post([FromBody]Product value)
         {
@@ -80,7 +80,7 @@ namespace ODataSample.Web.Controllers
             return Created(locationUri, _sampleContext.AddProduct(value));
         }
 
-        // PUT api/Products/5
+        // PUT odata/Products/5
         [HttpPut("{productId}")]
         public IActionResult Put(int productId, [FromBody]Product value)
         {
@@ -92,7 +92,7 @@ namespace ODataSample.Web.Controllers
             return new NoContentResult();
         }
 
-        // DELETE api/Products/5
+        // DELETE odata/Products/5
         [HttpDelete("{productId}")]
         public IActionResult Delete(int productId)
         {
