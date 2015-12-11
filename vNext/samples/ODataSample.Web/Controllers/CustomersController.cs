@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using Microsoft.AspNet.Mvc;
     using Microsoft.AspNet.OData;
-    using ODataSample.Web.Models;
+    using Models;
 
     [EnableQuery]
     [Route("odata/Customers")]
